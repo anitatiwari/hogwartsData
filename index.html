@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img class="logo" src="https://logos-world.net/imageup/Hogwarts/Hogwarts_(1).png" alt="logo" >
+    <h1>Student </h1>
+    <p>
+      Filter:
+      <button class="filter" data-action="filter" data-filter="*">All</button>
+      <button class="filter" data-action="filter" data-filter="Boy">Boy</button>
+      <button class="filter" data-action="filter" data-filter="Girl">Girl</button>
+      <button class="filter" data-action="filter" data-filter="Slytherin"> Slytherin</button>
+      <button class="filter" data-action="filter" data-filter="Hufflepuff"> 	Hufflepuff</button>
+      <button class="filter" data-action="filter" data-filter="Ravenclaw"> 		Ravenclaw</button>
+      <button class="filter" data-action="filter" data-filter="Gryffindor">	Gryffindor</button>
+      <button class="filter" data-action="filter" data-filter="true">Inquisitorial Squad</button>
+     
+    </p>
+    <hr>
+<main>
+ <input type="text" id="myInput" onkeyup=" myFunction()" placeholder="Search for names..">
+
+    <table id="list">
+      <thead>
+        <tr id="sorting">
+          <th data-action="sort" data-sort-direction="asc" data-sort="prefect">Prefect</th>
+
+          <th data-action="sort" data-sort-direction="asc" data-sort="squad" >Squad</th>
+
+          <th data-action="sort" data-sort-direction="asc" data-sort="name">Name</th>
+          <th data-action="sort" data-sort-direction="asc" data-sort="gender">Gender</th>
+          <th data-action="sort" data-sort-direction="asc" data-sort="house">House</th>
+         
+        </tr>
+      </thead>
+    </main>
+   
+      <tbody>
+        <!-- Students template will be copied and inserted here -->
+        
+      </tbody>
+    </table>
+
+    <template id="student">
+      <tr>
+        <td data-field="prefect" data-prefect="false"></td>
+      
+        <td data-field="squad">☆</td>
+        <td data-field="name">NAME</td>
+        <td data-field="gender">Gender</td>
+        <td data-field="house">House</td>
+      </tr>
+     
+    </template>
+
+    <div id="popUp" class="modal1 hide">
+      <div class="dialouge2">
+        <button class="closebutton">&#10006</button>
+        <h1 data-field="name">name</h1>
+        <p data-field="house">House: <span id="house">ravenclaw</span></p>
+        <p >Blood Status: <span></span></p>
+        
+        <button id="expell">Expell Student</button>
+      </div>
+      </div>
+<div id="removeother" class="modal hide">
+<div class="dialouge">
+  <button class="closebutton">&#10006</button>
+  <h1>Warning!</h1>
+  <p>There can only be one prefect of each house.</p>
+  <button id="remove_other">Remove Other</button>
+
+</div>
+
+<div id="remove_AorB" class="modal hide">
+<div class="dialouge">
+<button class="closebutton">&#10006</button>
+<h1>Warning!</h1>
+<p>There can not be more than two Prefect.</p>
+<div class="sidebyside">
+  <button id="remove_a">Remove <span data-field="prefectA">A</span></button>
+  <button id="remove_b">Remove <span data-field="prefectB">B</span></button>
+</div>
+
+</div>
+</div>
+
+
+</main>
+    <script src="script.js"></script>
+</body>
+</html>

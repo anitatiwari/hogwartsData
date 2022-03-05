@@ -1,0 +1,152 @@
+.logo {
+display: flex;
+margin: 0 auto;
+  width: 40vh;
+  height: 100%;
+}
+body{
+  background-color: rgba(0, 0, 0, 0.8);
+  color:rgb(211, 186, 116);
+  font-size: 1.1em;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+[data-action] {
+  cursor: pointer;
+}
+.filter {
+  background-color: rgba(106, 73, 110, 0.4);
+border-radius: 10%;
+  border: rgb(194, 56, 56);
+  padding: 1.2em;
+  font-size: medium;
+  color: burlywood;
+}
+.filter:hover{
+  background-color: rgba(100, 26, 87, 0.7);
+border-radius: 10%;
+color: rgb(245, 235, 235);
+}
+main table {
+  width: 90vw;
+  /* height: 100vh;  */
+  justify-items: center;
+}
+#myInput {
+ 
+  width: 93vw; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid rgb(194, 178, 178); /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#mylist tr.header,
+#list tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #444242;
+  color: beige;
+}
+
+#sorting th.sortby[data-sort-direction="asc"]::after {
+  content: "⭣";
+}
+#sorting th.sortby[data-sort-direction="desc"]::after {
+  content: "⭡";
+}
+td[data-field="prefect"]::after {
+  content: "⭐";
+  /* zoom: 1.5; */
+}
+td[data-field="prefect"][data-prefect="false"]::after {
+  filter: grayscale(1);
+}
+#sorting th.sortby {
+  text-decoration: underline;
+}
+#list {
+  border-collapse: collapse;
+}
+
+#list tbody tr td {
+  padding: 1.1em;
+  text-align: center;
+}
+
+#list tbody tr:nth-child(odd) td {
+  /* background-color: rgb(175, 159, 125); */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 0;
+}
+
+#list tbody tr:nth-child(even) td {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+thead {
+
+  /* position:fixed; */
+  /* display: inline-block; */
+
+  text-align: center;
+  /* position: fixed;
+top: 0; */
+}
+th {
+  padding: 20px;
+  background-color: rgb(80, 76, 52);
+}
+.hide {
+  visibility: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+
+}
+.dialouge {
+  box-shadow: 1px 1px 10px #333;
+  border-radius: 12px;
+  padding: 2em;
+  background-color: #afada9;
+  position: relative;
+}
+button.closebutton {
+  position: absolute;
+  right: -1em;
+  top: -1em;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+}
+.dialouge2 {
+  box-shadow: 1px 1px 10px #333;
+  border-radius: 12px;
+  padding: 4em;
+  width: 30vw;
+  height: 30vh;
+  background-color: #afada9;
+    position: relative;
+  font-size: 1.3em;
+}
+.modal1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
