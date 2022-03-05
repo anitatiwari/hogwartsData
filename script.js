@@ -238,7 +238,7 @@ function displayStudent(student) {
     buildList();
   }
 
-  let modal=document.querySelector("[data-field='name']")
+  clone.querySelector("[data-field='name']")
     .addEventListener("click", clickName);
   function clickName() {
 
