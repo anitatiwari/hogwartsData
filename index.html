@@ -13,10 +13,10 @@
 </head>
 <body class="bg-blend-multiply ">
   <img class="logo" src="https://logos-world.net/imageup/Hogwarts/Hogwarts_(1).png" alt="logo" >
-    <h1 class="">Student </h1>
-    <p class="">
-      Filter:
-      <button class="filter" data-action="filter" data-filter="*">All</button>
+    <h1 class="text-xl md:text-6xl text-neutral-100	font-bold p-8 text-center	">Students List</h1>
+    <p class=" flex flex-wrap md:justify-around p-4 bg-black md:m-10">
+      <span class="text-5xl text-neutral-200 bg-black p-2 rounded-md">Filter:</span>
+      <button class="filter " data-action="filter" data-filter="*">All</button>
       <button class="filter" data-action="filter" data-filter="Boy">Boy</button>
       <button class="filter" data-action="filter" data-filter="Girl">Girl</button>
       <button class="filter" data-action="filter" data-filter="Slytherin"> Slytherin</button>
@@ -28,11 +28,11 @@
     </p>
     <hr>
 <main>
-  <button class="hackthesystem w-40 text-sm bg-black md:text-md rounded p-3 m-4 ">Hack The System</button>
+  <button class="hackthesystem w-40 text-sm bg-black opacity-60	 md:text-md rounded p-3 m-4 ">Hack The System</button>
 
- <input type="text" id="myInput" onkeyup=" myFunction()" placeholder="Search for names..">
+ <input type="text" id="myInput" onkeyup=" myFunction()" class="ml-10 rounded-lg" placeholder="Search for names..">
 
-    <table id="list" class="table-auto">
+    <table id="list" class="table-auto m-auto">
       <thead>
         <tr id="sorting">
           <th data-action="sort" data-sort-direction="asc" data-sort="prefect">Prefect</th>
