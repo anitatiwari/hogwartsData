@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+
 </head>
-<body>
+<body class="bg-blend-multiply ">
   <img class="logo" src="https://logos-world.net/imageup/Hogwarts/Hogwarts_(1).png" alt="logo" >
-    <h1>Student </h1>
-    <p>
+    <h1 class="">Student </h1>
+    <p class="">
       Filter:
       <button class="filter" data-action="filter" data-filter="*">All</button>
       <button class="filter" data-action="filter" data-filter="Boy">Boy</button>
@@ -24,9 +28,11 @@
     </p>
     <hr>
 <main>
+  <button class="hackthesystem w-40 text-sm bg-black md:text-md rounded p-3 m-4 ">Hack The System</button>
+
  <input type="text" id="myInput" onkeyup=" myFunction()" placeholder="Search for names..">
 
-    <table id="list">
+    <table id="list" class="table-auto">
       <thead>
         <tr id="sorting">
           <th data-action="sort" data-sort-direction="asc" data-sort="prefect">Prefect</th>
@@ -59,14 +65,32 @@
      
     </template>
 
-    <div id="popUp" class="modal1 hide">
-      <div class="dialouge2">
-        <button class="closebutton">&#10006</button>
-        <h1 data-field="name">name</h1>
-        <p data-field="house">House: <span id="house">ravenclaw</span></p>
-        <p >Blood Status: <span></span></p>
-        
-        <button id="expell">Expell Student</button>
+    <div id="popUp" class="modalpop hide model p-8 m-5">
+      <div class="dialogstudentinfo">
+        <button class="closingbutton">&#10006</button>
+        <article class="singlestudent">
+          <div class="column flex">
+            <div class="studentinfotext gap-3 font-mono ">
+  
+              <h1 class="name text-4xl text-red-500">name</h1>
+        <p class="house">House: <span id="house">ravenclaw</span></p>
+        <p>Blood Status: <span></span></p>
+       
+        <p class="prefect prefectStatus" id="prefect">Prefect</p>
+     
+<!-- <span class="name hidePrefect"></span> is not prefect. -->
+     
+    
+        <button id="expell" class="bg-red-700 p-2 rounded-md mt-5">Expell Student</button> 
+      </div>
+     
+      <div>
+        <img src="" alt="" class="studentphoto">
+        </div>
+      </div>
+  
+        </article>
+  
       </div>
       </div>
 <div id="removeother" class="modal hide">

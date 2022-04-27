@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .logo {
 display: flex;
 margin: 0 auto;
@@ -5,23 +8,32 @@ margin: 0 auto;
   height: 100%;
 }
 body{
-  background-color: rgba(0, 0, 0, 0.8);
-  color:rgb(211, 186, 116);
+  background-image: url("images/556449.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color:rgb(247, 242, 242);
   font-size: 1.1em;
+
+  
 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 [data-action] {
   cursor: pointer;
 }
+[data-field] {
+  cursor: pointer;
+}
 .filter {
-  background-color: rgba(106, 73, 110, 0.4);
+  background-color: rgba(98, 50, 104, 0.4);
 border-radius: 10%;
   border: rgb(194, 56, 56);
-  padding: 1.2em;
+  padding: 1.6em;
   font-size: medium;
-  color: burlywood;
+  color: rgb(255, 254, 253);
 }
 .filter:hover{
   background-color: rgba(100, 26, 87, 0.7);
@@ -38,7 +50,7 @@ main table {
   width: 93vw; /* Full-width */
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid rgb(194, 178, 178); /* Add a grey border */
+  border: 1px solid rgb(240, 237, 237); /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
 }
 
@@ -46,7 +58,7 @@ main table {
 #list tr:hover {
   /* Add a grey background color to the table header and on hover */
   background-color: #444242;
-  color: beige;
+  color: rgb(255, 255, 255);
 }
 
 #sorting th.sortby[data-sort-direction="asc"]::after {
@@ -67,6 +79,7 @@ td[data-field="prefect"][data-prefect="false"]::after {
 }
 #list {
   border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 #list tbody tr td {
@@ -94,33 +107,36 @@ top: 0; */
 }
 th {
   padding: 20px;
-  background-color: rgb(80, 76, 52);
+  background-color: rgb(29, 9, 26);
 }
 .hide {
   visibility: hidden;
 }
 
-.modal {
+.modalpop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(15, 15, 15, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #333;
+  color: rgb(219, 210, 210);
 
 }
-.dialouge {
+.dialogstudentinfo {
   box-shadow: 1px 1px 10px #333;
   border-radius: 12px;
-  padding: 2em;
-  background-color: #afada9;
-  position: relative;
+  padding: 4em;
+  /* width: 40vw;
+  height: 40vh; */
+  background-color: #3a3938;
+    position: relative;
+  font-size: 1.3em;
 }
-button.closebutton {
+button.closingbutton {
   position: absolute;
   right: -1em;
   top: -1em;
@@ -149,4 +165,21 @@ button.closebutton {
   justify-content: center;
   align-items: center;
   color: #333;
+}
+.column{
+  display:flex;
+  gap: 2em;
+}
+.studentphoto{
+  width: 10vw;
+}
+.hackthesystem{
+  position: absolute;
+  top: 1em;
+  background-color: rgba(17, 16, 16,0.5);
+  color: beige;
+  padding: 1em;
+  font-size: 1em;
+  border-radius: 10%;
+
 }
